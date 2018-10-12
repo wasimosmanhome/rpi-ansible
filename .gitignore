@@ -1,0 +1,16 @@
+.DS_Store
+temp.js
+*.pyc
+*.swp
+*.retry
+.project
+.pydevproject
+.settings
+nbproject
+.idea/*
+.DS_STORE
+test.yml
+test.log
+local_hosts
+hosts_vagrant
+logs
