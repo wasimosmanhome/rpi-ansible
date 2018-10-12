@@ -19,3 +19,4 @@
 
 <!-- Test comment -->
 
+* This is actually a test comment. The purpose of the test is to find out git.
