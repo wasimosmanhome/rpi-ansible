@@ -1,0 +1,8 @@
+---
+# Solution for disabling screensaver from here: https://raspberrypi.stackexchange.com/a/753
+
+- name: Install required packages
+  apt: name=x11-xserver-utils state=present update_cache=yes
+
+- name: Generat exinitrc
+  template: dest=/home/pi/.xinitrc src=xinitrc.j2 owner=pi group=pi mode=0600

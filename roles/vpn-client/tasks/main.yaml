@@ -1,0 +1,11 @@
+---
+- name: Install openvpn client
+  apt: name=openvpn state=present update_cache=yes
+
+- name: Copy openvpn connection profile
+  copy: src=config.ovpn dest=/etc/openvpn/client.conf owner=pi group=pi mode=0755
+  notify: restart openvpn
+
+- name: Copy auth.txt for authentication
+  copy: src=auth.txt dest=/etc/openvpn/auth.txt owner=root group=root mode=0600
+  notify: restart openvpn

@@ -1,0 +1,11 @@
+---
+- name: Configure nagios
+  hosts: offie-rpi
+  user: pi
+  become: True
+
+
+  roles:
+    - manage-ssh
+    - disable-screensaver
+    - vpn-client
